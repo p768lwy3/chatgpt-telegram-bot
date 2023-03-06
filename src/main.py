@@ -66,7 +66,7 @@ async def chat(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
 
 
-if __name__ == "__main__":
+def app():
     # Read tokens from environment variables
     openai.api_key = os.getenv("OPENAI_API_KEY")
     telegram_api_key = os.getenv("TELEGRAM_API_KEY")
@@ -84,3 +84,7 @@ if __name__ == "__main__":
 
     # Start polling
     application.run_polling()
+
+
+if __name__ == "__main__":
+    app()
